@@ -15,3 +15,4 @@ function fieldsCheck(event) {
    };
    console.log(formData);
    formEl.reset();
+}

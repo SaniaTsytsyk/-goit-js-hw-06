@@ -1,14 +1,10 @@
 const inputEl = document.querySelector('#name-input');
-const outputEl = document.querySelector('#name-input');
+const outputEl = document.querySelector('#name-output');
 
-inputEl.addEventListener('input', onFormInput);
+inputEl.onchange = function () {
+   const newValue = inputEl.value
 
-function onFormInput(event) {
-   console.log(event.currentTarget.value);
-
-   outputEl.textContent = event.currentTarget.value;
-
-   if (event.currentTarget.value === "") {
-      return "Anonymous"
-   }
-}
+   newValue == "" || newValue == null
+      ? outputEl.textContent = "Anonymous"
+      : outputEl.textContent = newValue;
+};
